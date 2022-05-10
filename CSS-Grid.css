@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+}
+.menu-bar {
+    margin: 0 auto;
+    width: 100%;
+    grid-area: menu;
+}
+ul.nav {
+    width: 100%;
+}
+.nav, .sub {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway";
+}
+.nav li {
+    background: whitesmoke;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 200px;
+}
+.nav li a {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    color: black;
+}
+.nav li a:hover {
+    background-color: #d3d3d3;
+    color: ;
+}
+.nav > li {
+    border-left: 1px solid whitesmoke;
+    float: left;
+}
+.nav > li:hover .sub {
+    display: block;
+}
+.sub {
+    display: none;
+}
+.sub li {
+    border-top: 1px solid whitesmoke;
+}
+.services::after {
+    content: '\21E9';
+}
+#header {
+    grid-area: header;
+    background-color: cornflowerblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    border-radius: 10px;
+    color: whitesmoke;
+}
+#slider {
+    grid-area: slider;
+    background-color: cyan;
+    text-align: center;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 10px;
+    padding: 75px;
+}
+#feature {
+    grid-area: feature;
+    background-color: darkgray;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.5em;
+}
+div > .feature-box {
+    grid-area: feature-box;
+    text-align: justify;
+    border-radius: 10px;
+}
+#content {
+    grid-area: content;
+    background-color: lightskyblue;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 10px;
+    line-height: 1.5em;
+}
+#service {
+    grid-area: service;
+    background-color: darkkhaki;
+    padding: 20px;
+    text-align: justify;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+}
+#footer {
+    grid-area: footer;
+    color: blue;
+    text-align: center;
+    background-color: chartreuse;
+    border-radius: 10px;
+    font-family: Cooper;
+    font-weight: 900;
+    font-size: 32px;
+}
+#container {
+    clear: both;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: auto auto auto auto auto 100px;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-areas: "..... menu  menu menu menu ....."
+                         "header header header header header header"
+                         "feature feature slider slider slider slider"
+                         "feature feature content content content content"
+                         "feature feature service service service service"
+                         "footer footer footer footer footer footer";
+    background-color: whitesmoke;
+    justify-content: center;
+    font-family: Ubuntu;
+    border-radius: 10px;
+    padding: 10px;
+}
+.arrow {
+    font-size: 20px;
+}

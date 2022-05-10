@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid System</title>
+    <!-- <link rel="stylesheet" href="StyleForGridSystem.css"> -->
+    <link rel="stylesheet" href="CSS-Grid.css">
+</head>
+<body>
+    <div id="container">
+        <div class="menu-bar">
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="services">Services &#9660;</a>
+                    <ul class="sub">
+                        <li><a href="#">Window Installation</a></li>
+                        <li><a href="#">System Maintenance</a></li>
+                        <li><a href="#">App Installation</a></li>
+                        <li><a href="#">Virus Cleaning</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <div id="header">
+            <h1>Introduction to CSS Grid System!</h1>
+        </div>
+        <div id="slider"><b>Image Slider</b></div>
+        <div id="feature">
+            <div class="feature-box">
+                <p>This <b>CSS Module</b> defines a two-dimensional grid-based layout system, optimized for user interface design. In the grid layout model, the children of a grid container can be positioned into arbitrary slots in a predefined flexible or fixed-size layout grid. Level 2 expands Grid by adding “subgrid” capabilities for nested grids to participate in the sizing of their parent grids.
+
+                    CSS is a language for describing the rendering of structured documents (such as HTML and XML) on screen, on paper, etc.</p>
+            </div><br><br>
+            <div class="feature-box">
+                <p>This is a public copy of the editors’ draft. It is provided for discussion only and may change at any moment. Its publication here does not imply endorsement of its contents by W3C. Don’t cite this document other than as work in progress.
+
+                    Please send feedback by filing issues in GitHub (preferred), including the spec code “css-grid” in the title, like this: “[css-grid] …summary of comment…”. All issues and comments are archived. Alternately, feedback can be sent to the (archived) public mailing list www-style@w3.org.</p>
+            </div><br><br>
+            <div class="feature-box">
+                <p><b>This section is not normative</b>.
+                    
+                    Grid Layout is a layout model for CSS that has powerful abilities to control the sizing and positioning of boxes and their contents. Unlike Flexible Box Layout, which is single-axis–oriented, Grid Layout is optimized for 2-dimensional layouts: those in which alignment of content is desired in both dimensions.
+                    Today, we are in the early stages of such a revolutionary shift, brought about by CSS Grid Layout. Much of what we know of the possibilities, limitations and best practices surrounding web layouts is effectively rendered obsolete by this new layout module, and in their place we find new possibilities, limitations and best practices that will take us into the next era of web design.
+                    Much has already been said about the technical aspects of CSS grid and its one-dimensional cousin flexbox by people smarter than me. In this article, I want to bring these concepts into practical use. What you’ll get is a starting point for exploring what new layout opportunities and challenges CSS grid brings, what old problems it solves and how to start using the module in production websites today.
+
+                    My examples and focus will be on WordPress themes, but the practical approaches and code examples are agnostic and can be used in any web project, regardless of CMS, technology stack or tool.
+                </p><br>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content-box1">
+                <p><b>In Addition</b>, due to its ability to explicitly position items in the grid, Grid Layout allows dramatic transformations in visual layout structure without requiring corresponding markup changes. By combining media queries with the CSS properties that control layout of the grid container and its children, authors can adapt their layout to changes in device form factors, orientation, and available space, while preserving a more ideal semantic structuring of their content across presentations.
+
+                    Although many layouts can be expressed with either Grid or Flexbox, they each have their specialties. Grid enforces 2-dimensional alignment, uses a top-down approach to layout, allows explicit overlapping of items, and has more powerful spanning capabilities. Flexbox focuses on space distribution within an axis, uses a simpler bottom-up approach to layout, can use a content-size–based line-wrapping system to control its secondary axis, and relies on the underlying markup hierarchy to build more complex layouts. It is expected that both will be valuable and complementary tools for CSS authors.
+                    
+                    Grid Level 2 adds the subgrid feature: a subgridded axis is one which matches up its grid lines to lines in the element’s parent’s grid, and which derives the sizes of its tracks through this integration with the parent grid.</p> 
+            </div><br>
+            <div id="content-box2">
+                <p>As <b>Websites</b> evolved from simple documents into complex, interactive applications, techniques for document layout, e.g. floats, were not necessarily well suited for application layout. By using a combination of tables, JavaScript, or careful measurements on floated elements, authors discovered workarounds to achieve desired layouts. Layouts that adapted to the available space were often brittle and resulted in counter-intuitive behavior as space became constrained. As an alternative, authors of many web applications opted for a fixed layout that cannot take advantage of changes in the available rendering space on a screen.
+
+                    The capabilities of grid layout address these problems. It provides a mechanism for authors to divide available space for layout into columns and rows using a set of predictable sizing behaviors. Authors can then precisely position and size the building block elements of their application into the grid areas defined by the intersections of these columns and rows. The following examples illustrate the adaptive capabilities of grid layout, and how it allows a cleaner separation of content and style.</p>
+            </div>
+        </div>
+        <div id="service">
+            <div class="service-box"><b>Grid Layout</b> can be used to intelligently resize elements within a webpage. The adjacent figures represent a game with five major components in the layout: the game title, stats area, game board, score area, and control area. The author’s intent is to divide the space for the game such that:</div><br>
+            <div class="service-box">The stats area always appears immediately under the game title.
+                The game board appears to the right of the stats and title.
+                The top of the game title and the game board should always align.
+                The bottom of the game board and bottom of the stats area align when the game has reached its minimum height. In all other cases the game board will stretch to take advantage of all the space available to it.</div><br>
+            <div class="service-box">The controls are centered under the game board.
+                The top of the score area is aligned to the top of the controls area.
+                The score area is beneath the stats area.
+                The score area is aligned to the controls beneath the stats area.</div><br>
+            <div class="service-box"><b>Source-Order Independence</b><br>
+                Image: An arrangement suitable for portrait orientation.
+                An arrangement suitable for “portrait” orientation.
+                Image: An arrangement suitable for landscape orientation.
+                An arrangement suitable for “landscape“ orientation.
+                Continuing the prior example, the author also wants the game to adapt to different devices. Also, the game should optimize the placement of the components when viewed either in portrait or landscape orientation (Figures 6 and 7). By combining grid layout with media queries, the author is able to use the same semantic markup, but rearrange the layout of elements independent of their source order, to achieve the desired layout in both orientations.
+                
+                The following example uses grid layout’s ability to name the space which will be occupied by a grid item. This allows the author to avoid rewriting rules for grid items as the grid’s definition changes.</div>
+        </div> 
+        <div id="footer">
+            <P><b>Thanks For Visiting!</b></P>
+        </div>
+</body>
+</html>
